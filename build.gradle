@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+ext.dropwizardVersion = '0.8.1'
+
+
+dependencies {
+    compile 'io.dropwizard:dropwizard-core:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-client:' + dropwizardVersion
+    compile ('org.glassfish.hk2:hk2-extras:2.4.0-b10')
+    testCompile 'io.dropwizard:dropwizard-testing:' + dropwizardVersion
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
